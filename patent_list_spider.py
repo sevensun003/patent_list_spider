@@ -141,7 +141,7 @@ if __name__ == '__main__':
         start += limit
         data2['resultPagination.limit'] = limit
         data2['resultPagination.start'] = start
-        response = requests.post(url, data=data, cookies=getcookiefromchrome(domain))
+        response = requests.post(url2, data=data2, cookies=getcookiefromchrome(domain))
         sleep(1)
         content = response.content.decode('utf-8')
         soup = BeautifulSoup(content, "html.parser")
